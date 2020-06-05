@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
 asyn web application
 """
@@ -22,6 +19,7 @@ async def init(lp):
 	srv = await loop.create_server(app.make_handler(), '127.0.0.1', 9000)
 	logging.info('server started at http://127.0.0.1:9000...')
 	return srv
+
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(init(loop))
